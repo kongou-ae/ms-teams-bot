@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kongou-ae/ms-teams-bot#readme",
   "dependencies": {
     "botbuilder": "^3.4.4",
+    "botbuilder-calling": "^3.0.1",
     "express": "^4.14.0",
     "restify": "^4.2.0"
   }
