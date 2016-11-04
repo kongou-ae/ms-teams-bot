@@ -7,7 +7,7 @@ var builder = require('botbuilder');
 
 // Setup Restify Server
 var server = restify.createServer();
-server.listen(process.env.port || process.env.PORT, function () {
+server.listen(process.env.PORT, function () {
    console.log('%s listening to %s', server.name, server.url);
 });
 
@@ -25,4 +25,8 @@ server.post('/api/messages', connector.listen());
 
 bot.dialog('/', function (session) {
     session.send("Hello World");
+});
+
+dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
+  session.send('こんにちは');
 });
