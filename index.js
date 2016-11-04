@@ -23,10 +23,8 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-bot.dialog('/', function (session) {
-    session.send("Hello World");
-});
-
 dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
   session.send('こんにちは');
 });
+
+bot.add('/',dialog)
